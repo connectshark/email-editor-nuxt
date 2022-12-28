@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: email-editor
+    env: node
+    region: singapore
+    plan: free
+    branch: main
+    startCommand: node .output/server/index.mjs
+    buildCommand: npm install && npm run build
+    envVars:
+    - key: NITRO_PRESET
+      value: render-com
+    - key: NUXT_EMAIL_SERVICE_AUTH_USER
+      sync: false
+    - key: NUXT_EMAIL_SERVICE_AUTH_PW
+      sync: false
+    - key: NUXT_EMAIL_DEFAULT_FROM
+      sync: false

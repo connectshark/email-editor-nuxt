@@ -1,5 +1,13 @@
 {
   "name": "email-editor-nuxt",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/connectshark/email-editor-nuxt"
+  },
+  "author": {
+    "name": "nosegates",
+    "url": "https://github.com/connectshark"
+  },
   "engines": {
     "node": ">=18"
   },

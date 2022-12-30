@@ -11,11 +11,14 @@
           class="bg-white p-3 px-4 w-full rounded-2xl text-stone-900 placeholder:text-stone-500 outline-primary"
           placeholder="Email Title">
       </p>
+      <div>
+        <p v-html="content"></p>
+      </div>
       <div class=" mb-8">
         <Editor :api-key="apiKey" v-model="content" :init="{
           language: 'zh_TW',
           height: 500,
-          plugins: ['emoticons', 'table']
+          plugins: ['emoticons', 'table', 'image']
         }"></Editor>
       </div>
       <div class=" text-right">
@@ -35,6 +38,7 @@ const email = ref('')
 const title = ref('')
 
 
+
 const {
   loading,
   send,
@@ -48,6 +52,7 @@ const submitHandler = () => {
     content: content.value
   })
 }
+
 
 watch(success, value => {
   if (value) {

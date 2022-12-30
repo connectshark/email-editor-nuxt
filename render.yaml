@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: email-editor
+    name: email-editor-nuxt
     env: node
     region: singapore
     plan: free
